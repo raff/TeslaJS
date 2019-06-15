@@ -13,16 +13,17 @@ var fs = require('fs');
 var tjs = require('../teslajs');
 require('colors');
 
+const C = '\u2588';
+const c = '\u2501';
+
 function logo() {
-    console.log("\n");
-    console.log("TTTTT EEEEE SSSSS L     AAAAA     J SSSSS");
-    console.log("  T   EEEEE S     L     AAAAA     J S");
-    console.log(" TTT        s     L               J S");
-    console.log("  T   EEEEE SSSSS L     AAAAA     J SSSSS");
-    console.log("  T             S L     A   A     J     S");
-    console.log("  T   EEEEE     S L     A   A J   J     S");
-    console.log("  T   EEEEE SSSSS LLLLL A   A JJJJJ SSSSS");
-    console.log("=========================================");
+    console.log('\n');
+    console.log(C+C+C+C+C+C+C+C, C+C+C+C+C+C+C+C, C+C+C+C+C+C+C+C, C+C+'    ',   C+C+C+C+C+C+C+C, '    '+C+C, C+C+C+C);
+    console.log('   '+C+C+'   ', '        ',      C+C+'      ',    C+C+'    ',   '        ',      '    '+C+C, C+'   ');
+    console.log('   '+C+C+'   ', C+C+C+C+C+C+C+C, C+C+C+C+C+C+C+C, C+C+'    ',   C+C+C+C+C+C+C+C, '    '+C+C, C+C+C+C);
+    console.log('   '+C+C+'   ', '        ',         '      '+C+C, C+C+'    ',   C+C+'    '+C+C,  '    '+C+C, '   '+C);
+    console.log('   '+C+C+'   ', C+C+C+C+C+C+C+C, C+C+C+C+C+C+C+C, C+C+C+C+C+C,  C+C+'    '+C+C,  '  '+C+C+C+C, C+C+C+C);
+    console.log(c.repeat(54));
 }
 
 exports.SampleFramework = function SampleFramework(program, main) {
@@ -33,7 +34,7 @@ exports.SampleFramework = function SampleFramework(program, main) {
     this.login_cb = function (err, result) {
         if (result.error) {
             console.error("Login failed!".red);
-            console.warn(JSON.stringify(result.error));
+            console.warn(JSON.stringify(result.error, null, "  "));
             return;
         }
 

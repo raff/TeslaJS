@@ -41,7 +41,7 @@ function sampleMain(tjs, options) {
         "Phone Bluetooth name"
         );
 
-    console.log(JSON.stringify(entry));
+    console.log(JSON.stringify(entry, null, "  "));
 
     tjs.calendar(options, entry, function (err, result) {
         if (result.result) {

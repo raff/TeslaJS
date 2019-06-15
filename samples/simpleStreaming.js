@@ -53,6 +53,8 @@ function sampleMain(tjs, options) {
             return;
         }
 
+        console.log(JSON.stringify(response, null, "  "));
+
         // display the streaming results
         console.log(body);
 

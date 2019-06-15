@@ -32,6 +32,10 @@ sample.run();
 //
 function sampleMain(tjs, options) {
     tjs.vehicleDataAsync(options).then( function(vehicleData) {
+        console.log();
+        console.log(JSON.stringify(vehicleData, null, "  "));
+        console.log();
+
         var vehicle_state = vehicleData.vehicle_state;
         var charge_state = vehicleData.charge_state;
 

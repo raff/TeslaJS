@@ -34,6 +34,7 @@ function sampleMain(tjs, options) {
     tjs.wakeUp(options, function (err, result) {
         if (err) {
             console.error("\nWakeUp command: " + "Failed!".red);
+            console.log(err);
         } else {
             console.log("\nWakeUp command: " + "Succeeded".green);
             console.log("Vehicle state: " + result.state.green);
